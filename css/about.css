@@ -1,0 +1,299 @@
+/* =========================================
+   ABOUT PAGE STYLES
+   ========================================= */
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 15vh 5vw 8vh;
+  background-color: var(--bg-light);
+}
+
+.about-hero h5 {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.about-hero h1 {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--primary-blue);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+}
+
+/* The Story Section */
+.about-story {
+  padding: 5vh 5vw 10vh;
+  background-color: var(--bg-light);
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.story-left {
+  flex: 1.5;
+}
+
+.story-left h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: var(--primary-blue);
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.story-left p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.story-left p strong {
+  color: var(--primary-blue);
+}
+
+.vision-statement {
+  font-size: 1.3rem !important;
+  font-style: italic;
+  color: var(--primary-blue) !important;
+  border-left: 4px solid #31ffcf;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+.story-right {
+  flex: 1;
+}
+
+.core-service-box {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: var(--card-radius);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.core-service-box h3 {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.core-service-box ul {
+  list-style: none;
+}
+
+.core-service-box li {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.core-service-box li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #31ffcf;
+  font-weight: bold;
+}
+
+/* Company Facts Grid (Replaces the Table) */
+.company-facts {
+  padding: 10vh 5vw;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  text-align: center;
+}
+
+.facts-header h2 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 60px;
+}
+
+.facts-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.fact-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fact-card h3 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2.5rem;
+  color: #31ffcf;
+  margin-bottom: 10px;
+}
+
+.fact-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Leadership Team Section (SESO Image Style) */
+.leadership-section {
+  padding: 15vh 5vw;
+  background-color: var(--bg-light);
+  text-align: center;
+}
+
+.leadership-header h5 {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.leadership-header h2 {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--primary-blue);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 60px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  width: 350px;
+  background-color: var(--white);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-image-wrapper {
+  position: relative;
+  height: 350px;
+  background-color: #e5e5e5;
+}
+
+.team-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.team-tag {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--white);
+  color: var(--primary-blue);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-info {
+  padding: 30px;
+}
+
+.team-info h3 {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.team-info p {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .story-container {
+    flex-direction: column;
+  }
+}
+
+.cta-section {
+  text-align: center;
+
+  /* Make it a full screen to push the cards completely off-screen */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--white);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  /* Forces it over the GSAP cards */
+  position: relative;
+  z-index: 50;
+}
+
+.cta-section h2 {
+  color: var(--primary-blue);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 15px 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4cd8b8;
+  color: var(--primary-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}

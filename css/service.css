@@ -1,0 +1,192 @@
+/* Container for the whole component */
+.stories-wrapper {
+  padding: 100px 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stories-title {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--primary-blue);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 50px;
+}
+
+.stories-title .highlight {
+  color: #4cd8b8;
+  /* The mint green from your screenshot */
+}
+
+/* Tabs Navigation Bar */
+.tabs-nav {
+  display: flex;
+  background: #1a1a1a;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.tab-link {
+  flex: 1;
+  padding: 25px 10px;
+  background: #1a1a1a;
+  color: #777;
+  border: none;
+  border-right: 1px solid #333;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.tab-link:last-child {
+  border-right: none;
+}
+
+.tab-link.active {
+  background: var(--white);
+  color: var(--primary-blue);
+}
+
+/* Content Box */
+.tab-content {
+  display: none;
+  /* Hidden until active */
+  background: var(--white);
+  padding: 60px;
+  border-radius: 0 0 15px 15px;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.tab-content.active {
+  display: grid;
+}
+
+.category-badge {
+  background: #eefaf7;
+  color: #2d8a75;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.content-text h2 {
+  font-family: "Archivo Black", sans-serif;
+  color: var(--primary-blue);
+  margin: 20px 0;
+  font-size: 2.2rem;
+}
+
+.content-text p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.download-pdf {
+  color: #2d8a75;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid transparent;
+}
+
+.download-pdf:hover {
+  border-bottom: 1px solid #2d8a75;
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Mobile responsive */
+@media (max-width: 850px) {
+  .tab-content.active {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs-nav {
+    flex-wrap: wrap;
+  }
+
+  .tab-link {
+    flex: unset;
+    width: 33.33%;
+  }
+}
+
+/* --- CTA SECTION FIX --- */
+.cta-section {
+  text-align: center;
+
+  /* Make it a full screen to push the cards completely off-screen */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--white);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  /* Forces it over the GSAP cards */
+  position: relative;
+  z-index: 50;
+}
+
+.cta-section h2 {
+  color: var(--primary-blue);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 15px;
+}
+
+/* You already have these, but ensure they are inside your file */
+.cta-section p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 18px 45px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4cd8b8;
+  /* Mint green to match your highlight */
+  color: var(--primary-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- FOOTER SPACING FIX --- */
+/* This ensures the fixed footer doesn't cover your CTA button */
+.footer-spacer {
+  height: 350px;
+  /* Match this roughly to your footer's height */
+  background-color: var(--white);
+}

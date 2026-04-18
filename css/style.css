@@ -1,0 +1,616 @@
+/* =========================================
+   1. ROOT VARIABLES & THEME
+   ========================================= */
+:root {
+  --primary-blue: #07003d;
+  --accent-gold: #ffb400;
+  --green : #2d8a75;
+  --bg-light: #f5f5f5;
+  --white: #ffffff;
+  --text-dark: #1f1f1f;
+  --text-muted: rgba(0, 0, 0, 0.6);
+  --nav-height: 80px;
+  --footer-height: 60vh; /* Keeps the reveal math perfect */
+}
+
+/* =========================================
+   2. RESET & GLOBALS
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  background-color: var(--primary-blue); /* Fills the absolute bottom behind footer */
+  font-family: 'Inter', sans-serif; /* Clean default body font */
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Archivo Black", sans-serif;
+}
+
+/* =========================================
+   3. MAIN LAYOUT & FOOTER REVEAL
+   ========================================= */
+#main {
+  position: relative;
+  z-index: 10;
+  background-color: var(--bg-light); /* The "Curtain" that hides the footer */
+  margin-bottom: var(--footer-height); /* The "Hole" for the footer to show through */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3); /* Premium drop shadow on the curtain */
+  overflow: hidden; /* Contains the sections neatly */
+}
+
+/* --- NEW PREMIUM FOOTER --- */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--footer-height); /* Keeps the reveal math working */
+  z-index: 1; 
+  background-color: #000000; /* Deep black from the screenshot */
+  color: var(--white);
+  display: flex;
+  align-items: center; /* Centers the whole container vertically */
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allows it to stack on mobile */
+  gap: 30px;
+}
+
+/* --- COLUMN 1: BRAND --- */
+.footer-brand {
+  max-width: 200px;
+}
+
+.footer-logo {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+}
+
+.footer-brand .copyright {
+  font-size: 13px;
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- TEXT COLUMNS --- */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.footer-col a {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-col a:hover {
+  color: var(--white);
+}
+
+/* --- SOCIALS COLUMN --- */
+.socials-col i {
+  font-style: normal;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+  filter: grayscale(100%); /* Keeps icons looking uniform */
+}
+
+/* --- CONTACT COLUMN --- */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 280px;
+}
+
+.footer-contact p {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #a0a0a0; /* Keeps the soft grey to match the other links */
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-contact strong {
+  color: var(--white); /* Makes the labels pop out */
+  font-weight: 700;
+}
+
+.footer-contact a {
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--white); /* Brightens when the user hovers over the email/phone */
+}
+
+/* --- RESPONSIVE ADJUSTMENT FOR SMALL LAPTOPS/TABLETS --- */
+@media (max-width: 1024px) {
+  .footer-container {
+    justify-content: flex-start;
+    gap: 50px;
+  }
+}
+
+/* =========================================
+   4. NAVIGATION
+   ========================================= */
+nav {
+  height: var(--nav-height);
+  padding: 0 5vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-light);
+  border-bottom: 1px solid rgba(7, 0, 61, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#nav-part1 h2 {
+  color: var(--primary-blue);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+#nav-part2 h4 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+#nav-part2 h4 a {
+  display: block;
+  padding: 10px 24px;
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s ease;
+}
+
+#nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-blue);
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+}
+
+#nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+#nav-part2 h4:hover a {
+  color: var(--white);
+}
+
+/* =========================================
+   5. PAGE 1: HERO & 3D SHIP
+   ========================================= */
+#page1 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-light);
+  position: relative;
+}
+
+#center {
+  height: calc(100vh - var(--nav-height));
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+}
+
+#ship-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Lets you click things beneath the canvas */
+  z-index: 1;
+}
+
+#ship-model {
+  width: 100%;
+  height: 100%;
+  display: block;
+  outline: none;
+}
+
+#left {
+  position: relative;
+  z-index: 3;
+  width: 35%;
+  opacity: 0;
+  visibility: hidden;    /* Keep this to prevent interaction before load */
+}
+
+#left h3 {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--primary-blue);
+  line-height: 1.4;
+}
+
+#right {
+  position: relative;
+  z-index: 3;
+  text-align: right;
+}
+
+#right h1 {
+  font-size: clamp(4rem, 9vw, 12rem);
+  color: var(--primary-blue);
+  line-height: 0.85;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+/* =========================================
+   6. PAGE 2: HOW IT WORKS
+   ========================================= */
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  padding: 120px 8%;
+  background: var(--bg-light);
+  color: var(--primary-blue);
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Ensures it stays above the footer */
+}
+
+.how-header h1 {
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 900;
+}
+
+.how-header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.how-container {
+  margin-top: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2vw;
+}
+
+.how-card {
+  width: 26vw;
+  padding: 4vw 2vw;
+  border-radius: 2vw;
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 28vw;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.how-card img {
+  width: 12vw;
+  margin-bottom: 2vw;
+  display: block;
+}
+
+.how-card h2 {
+  font-size: 2vw;
+  font-weight: 900;
+  margin-bottom: 1vw;
+}
+
+.how-card p {
+  color: var(--text-muted);
+  font-size: 1.1vw;
+  line-height: 1.6;
+}
+
+.arrow {
+  width: 4vw;
+  height: 4vw;
+  background: #e6e6e6;
+  border-radius: 50%; /* Circle looks more premium than rounded square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  color: var(--text-muted);
+  align-self: center;
+}
+
+/* =========================================
+   7. PAGE 3: PLANE ANIMATION
+   ========================================= */
+#page3 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-light);
+  z-index: 2;
+}
+
+.plane-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.plane-text {
+  font-size: clamp(3rem, 7vw, 9rem);
+  color: var(--primary-blue);
+  line-height: 1;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text2 {
+  opacity: 0;
+}
+
+#plane-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5; /* Plane MUST be above text */
+  pointer-events: none;
+}
+
+#plane-img {
+  height: 100vh;
+  position: absolute;
+  left: -70vw; /* Starts off-screen left */
+  top: 0;
+  object-fit: contain;
+}
+
+/* =========================================
+   8. PAGE 4: IMAGE GALLERY / PROJECTS
+   ========================================= */
+#page4 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-light);
+  position: relative;
+  z-index: 2; /* Extremely important: this blocks the footer from showing early */
+  padding: 10vh 0;
+}
+
+.services-header {
+  padding: 0 5vw 40px;
+}
+
+.services-header h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  color: var(--primary-blue);
+  letter-spacing: -1px;
+}
+
+/* Ensure the anchor tags behave like normal divs so the layout doesn't break */
+a.elem {
+  text-decoration: none;
+  display: flex; /* Keeps the text aligned properly */
+}
+
+#elem-container {
+  width: 100%;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.elem {
+  height: 6vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 5vw;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.elem h2 {
+  font-size: 2vw;
+  color: var(--primary-blue); /* Changed from primary-blue to dark gray */
+  position: relative;
+  z-index: 10;
+  transition: color 0.3s ease; /* Adds a smooth fade when hovering */
+}
+
+/* Make the text turn white when the gold overlay slides down */
+.elem:hover h2 {
+  color: var(--white);
+}
+
+.elem .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #31ffcf;
+  position: absolute;
+  left: 0;
+  top: -100%; /* Hidden above */
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.elem:hover .overlay {
+  top: 0; /* Slides down on hover */
+}
+
+/* Note: The JS logic handles appending the data-image to follow the mouse */
+
+/* =========================================
+   9. PAGE 5: TESTIMONIALS
+   ========================================= */
+#page5 {
+  min-height: 60vh;
+  width: 100%;
+  background-color: var(--bg-light); /* Matches the off-white background */
+  padding: 100px 5vw;
+  position: relative;
+  z-index: 2; /* Keeps it above the footer for the reveal effect */
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonials-header h5 {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.testimonials-header h2 {
+  font-family: 'Inter', sans-serif; /* Using Inter here to match the clean look of the image */
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows stacking on mobile */
+}
+
+.testimonial-card {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card .stars {
+  color: #ffb400; /* Gold star color */
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.testimonial-card .quote {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--primary-blue);
+  margin-bottom: 30px;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto; /* Pushes the profile to the bottom if quotes are different lengths */
+}
+
+.client-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ccc; /* Placeholder color while images load */
+}
+
+.client-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+}

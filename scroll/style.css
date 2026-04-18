@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 300vh;
+}
+
+.spacer {
+  height: 100vh;
+}
+
+.trigger-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.scroll-img {
+  width: 300px;
+  transform: translateX(-200px); /* start left */
+}
