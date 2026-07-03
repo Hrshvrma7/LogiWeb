@@ -10,7 +10,7 @@ Here is a look at the primary user interface and layout (scroll horizontally to 
 <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;">
   <img src="assets/scrs/homepage1.png" alt="LogiWeb Homepage" width="400">
   <img src="assets/scrs/quotation1.png" alt="LogiWeb Dashboard" width="400">
-  <img src="assets/scrs/service1.png" alt="LogiWeb Services" width="400">
+  <img src="assets/scrs/services1.png" alt="LogiWeb Services" width="400">
   <img src="assets/scrs/aboutus1.png" alt="Quote Request System" width="400">
 </div>
 
