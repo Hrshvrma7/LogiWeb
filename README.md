@@ -17,7 +17,7 @@ Here is a look at the primary user interface and layout (scroll horizontally to 
 ### Architecture & Workflows
 The project's design and structural layout are mapped out below:
 
-![LogiWeb System Diagram](diagrams/Class/class_diagram.png)
+ <img src="diagrams/Class/class_diagram.png" alt="LogiWeb Homepage" width="400">
 
 ---
 
