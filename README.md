@@ -7,9 +7,13 @@ LogiWeb is a modern, web-based logistics and supply chain management platform de
 ## 📸 Project Previews & Architecture
 
 ### Application Screenshots
-Here is a look at the user interface and platform layout:
+Here is a look at the user interface and platform layout (scroll horizontally to see more):
 
-![LogiWeb Homepage](assets/screenshot_homepage.png) *(Replace this with your homepage screenshot path)*
+<div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;">
+  <img src="assets/screenshot_homepage.png" alt="LogiWeb Homepage" width="400">
+  <img src="assets/screenshot_homepage.png" alt="LogiWeb Dashboard" width="400">
+  <img src="assets/screenshot_homepage.png" alt="LogiWeb Services" width="400">
+</div>
 
 ### Architecture & Workflows
 The project's design and structural layout are mapped out below:
