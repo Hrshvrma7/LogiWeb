@@ -46,3 +46,14 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 1. Clone the repository:
    ```bash
    git clone [https://github.com/Hrshvrma7/LogiWeb.git](https://github.com/Hrshvrma7/LogiWeb.git)
+
+2. Navigate into the project directory:
+   ```bash
+   cd LogiWeb
+
+3. Install the dependencies:
+   ```Bash
+   npm install
+   # OR if you prefer yarn
+   yarn install
+
