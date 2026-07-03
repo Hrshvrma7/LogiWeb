@@ -10,7 +10,7 @@ LogiWeb is a modern, web-based logistics and supply chain management platform de
 Here is a look at the user interface and platform layout (scroll horizontally to see more):
 
 <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;">
-  <img src="assets/screenshot_homepage.png" alt="LogiWeb Homepage" width="400">
+  <img src="assets/scrs/homepage1.png" alt="LogiWeb Homepage" width="400">
   <img src="assets/screenshot_homepage.png" alt="LogiWeb Dashboard" width="400">
   <img src="assets/screenshot_homepage.png" alt="LogiWeb Services" width="400">
 </div>
